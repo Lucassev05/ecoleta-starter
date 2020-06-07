@@ -84,3 +84,16 @@
   color: white;
   margin-top: 32px;
 }
+
+/* Modal point-error */
+#modal.modal-error .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+#modal.modal-error .content h1 {
+  color: white;
+  margin-top: 32px;
+  text-align: center;
+}

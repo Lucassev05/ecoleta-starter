@@ -98,6 +98,9 @@
   {% if saved %}
     {%include "partials/point-created.html"%}
   {% endif %}
+  {% if errormsg %}
+    {%include "partials/modal-error.html"%}
+  {% endif %}
 {% endblock modal %}
 
 {% block scripts %}
