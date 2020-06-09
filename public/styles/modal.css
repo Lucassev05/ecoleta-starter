@@ -60,6 +60,11 @@
   font-size: 16px;
   color: #6c6c80;
 }
+#modal form input:required {
+  border-width: medium;
+  border-style: solid;
+  border-color: red;
+}
 
 #modal form button {
   width: 72px;

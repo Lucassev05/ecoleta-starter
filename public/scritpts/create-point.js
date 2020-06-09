@@ -16,7 +16,6 @@ function getCities(event) {
   const ufValue = event.target.value;
 
   const indexOfSelectedState = event.target.selectedIndex;
-  console.log(indexOfSelectedState);
   stateInput.value = event.target.options[indexOfSelectedState].text;
 
   const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`;
@@ -67,8 +66,42 @@ function handleSelectedItem(event) {
     selectedItems.push(itemId);
   }
 
-  console.log(selectedItems);
-
   // atualizar o hidden input com os dados selecionados
   collectedItems.value = selectedItems;
 }
+
+const btnSubmit = document.querySelector("button[type=submit]");
+const requiredElements = document.querySelectorAll("[class=required]");
+
+btnSubmit.addEventListener("click", () => {
+  for (const requiredElement of requiredElements) {
+    let textOnInput = requiredElement.value.trim();
+    let isEmpty = checkEmpty(textOnInput);
+    if (isEmpty) {
+      requiredElement.required = true;
+    }
+  }
+  return false;
+});
+
+function checkEmpty(field) {
+  if (field == "" || field == null || field == "undefinied") {
+    return true;
+  } else if (/^\s*$/.test(field)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+addEventListener("change", () => {
+  const requiredElements = document.querySelectorAll(":required");
+  for (const requiredElement of requiredElements) {
+    let textOnInput = requiredElement.value.trim();
+    let isEmpty = checkEmpty(textOnInput);
+    if (!isEmpty) {
+      requiredElement.required = false;
+    }
+  }
+  return false;
+});

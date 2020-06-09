@@ -6,5 +6,6 @@ buttonSearch.addEventListener("click", () => {
 });
 
 close.addEventListener("click", () => {
+  inputSearchModal.required = false;
   modal.classList.add("hide");
 });

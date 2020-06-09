@@ -32,16 +32,16 @@ server.get("/create-point", (req, res) => {
 server.post("/savepoint", (req, res) => {
   // req.body: corpo do formulário
   const query = `
-  INSERT INTO places(
-      name,
-      image,
-      address,
-      address_complement,
-      state,
-      city,
-      items
-  ) VALUES (?,?,?,?,?,?,?);
-`;
+    INSERT INTO places(
+        name,
+        image,
+        address,
+        address_complement,
+        state,
+        city,
+        items
+    ) VALUES (?,?,?,?,?,?,?);
+  `;
   const values = [
     req.body.name,
     req.body.image,
@@ -55,7 +55,6 @@ server.post("/savepoint", (req, res) => {
     if (err) {
       return res.render("create-point.html", { errormsg: true });
     }
-    console.log("Cadastrado com sucesso");
     return res.render("create-point.html", { saved: true });
   }
   db.run(query, values, afterInsertData);

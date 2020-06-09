@@ -2,6 +2,11 @@
   --title-color: #322153;
   --primary-color: #34cd79;
 }
+:required {
+  border-width: thin;
+  border-style: solid;
+  border-color: red;
+}
 * {
   margin: 0;
   padding: 0;

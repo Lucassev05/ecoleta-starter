@@ -21,35 +21,35 @@
       <div class="field-group">
         <div class="field">
           <label for="name">Nome da entidade</label>
-          <input type="text" name="name" required="required"/>
+          <input type="text" name="name" class="required"/>
         </div>
         <div class="field">
           <label for="image">Imagem da entidade</label>
-          <input type="url" name="image" placeholder="http://" required="required"/>
+          <input type="url" name="image" placeholder="http://" class="required"/>
         </div>
       </div>
 
       <div class="field-group">
         <div class="field">
           <label for="address">Endereço</label>
-          <input type="text" name="address" required="required"/>
+          <input type="text" name="address" class="required"/>
         </div>
         <div class="field">
           <label for="address2">Número/Complemento</label>
-          <input type="text" name="address2" required="required"/>
+          <input type="text" name="address2" class="required"/>
         </div>
       </div>
       <div class="field-group">
         <div class="field">
           <label for="state">Estado</label>
-          <select name="uf" required="required">
+          <select name="uf" class="required">
             <option value="">Selecione o Estado</option>
             <input type="hidden" name="state"/>
           </select>
         </div>
         <div class="field">
           <label for="city">Cidade</label>
-          <select name="city" disabled="disabled" required="required">
+          <select name="city" disabled="disabled" class="required">
             <option value="">Selecione a Cidade</option>
           </select>
         </div>
