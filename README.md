@@ -50,6 +50,7 @@ $ npm start
 - <a href="https://expressjs.com/" target="_blank">Express</a>
 - <a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a>
 - <a href="https://www.sqlite.org/" target="_blank">Sqlite3</a>
+- <a href="https://nodemon.io/" target="_blank">Nodemon</a>
 
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/datadog-metrics
