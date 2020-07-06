@@ -24,7 +24,11 @@ Além do processo de pesquisa do ponto, também é possível adicionar um ponto 
 
 ### Clone
 
-- Clone esse projeto para sua maquina utilizando: `git@github.com:Lucassev05/ecoleta-starter.git`
+> Clone o repositório
+
+```shell
+$ git clone git@github.com:Lucassev05/ecoleta-starter.git
+```
 
 ### Configuração
 
